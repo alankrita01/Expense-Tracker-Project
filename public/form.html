@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>Expense Tracker</h1>
+  </header>
+
+  <main>
+    <form id="user-form" action="/expense/add-expense" method="POST" onsubmit="expenseDetails(event)">
+
+      <section class="container">
+        <div class="div-container">
+          <label for="amount">Enter Expense Amount:</label>
+          <input type="number" name="amount" id="amount">
+
+          <label for="description">Enter Description:</label>
+          <input type="text" name="description" id="description">
+
+          <label for="category">Enter category:</label>
+          <select name="category" id="category">
+            <option value="fuel">Fule</option>
+            <option value="food">Food</option>
+            <option value="electricity">Electricity</option>
+            <option value="movie">Movie</option>
+          </select>
+
+          
+        </div>
+
+        <button class="submit" type="submit">Add Expense</button>
+      </section>
+    </form>
+    
+  </main>
+    
+  <div class="div-list">
+      <ul id="listOfUser"></ul>
+  </div>
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+  <script type="text/javascript" src="./form.js"></script>
+  
+
+</body>
+</html>
